@@ -1,0 +1,124 @@
+<section id="contact" class="w-full py-12 border-t border-[#ffffff10]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Let's talk</h2>
+    <h3 class="text-4xl md:text-5xl font-medium text-[var(--white)] mb-6">
+      Contact
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- LEFT SIDE: CONTACT INFO -->
+      <div class="text-[var(--white-icon)]">
+        <p class="mb-4">
+          Have a question, collaboration idea, or project in mind? Feel free to reach out anytime.
+        </p>
+
+        <div class="flex items-center gap-2 mb-2">
+          <span>📍 Location:</span>
+          <span class="text-[var(--white)]">India</span>
+        </div>
+
+        <div class="flex items-center gap-2 mb-2">
+          <span>📧 Email:</span>
+          <a href="mailto:sharmavishwajeet04@gmail.com" class="text-[var(--white)] hover:underline">
+            sharmavishwajeet04@gmail.com
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 mb-2">
+          <span>📞 Phone:</span>
+          <a href="tel:+919351812885" class="text-[var(--white)] hover:underline">
+            +91-9351812885
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 mb-2">
+          <span>🔗 GitHub:</span>
+          <a href="https://github.com/vishusharmaX" target="_blank"
+            class="text-[var(--white)] hover:underline">
+            github.com/vishusharmaX
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 mb-2">
+          <span>🔗 LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/vishux" target="_blank"
+            class="text-[var(--white)] hover:underline">
+            linkedin.com/in/vishux
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: CONTACT FORM -->
+      <div>
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xovogead" 
+          method="POST"
+          class="flex flex-col gap-4"
+        >
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
+          />
+          <input
+            type="email"
+            name="reply_to"
+            placeholder="Your Email"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)]"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="6"
+            required
+            class="px-4 py-2 bg-[#1414149c] text-[var(--white)] border border-[var(--white-icon-tr)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sec)] resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="px-4 py-2 bg-[var(--white-icon-tr)] text-[var(--white)] rounded-lg opacity-60 transition-opacity border border-[var(--white-icon-tr)] hover:opacity-100 hover:bg-[var(--white-icon-tr)]"
+          >
+            Submit
+          </button>
+        </form>
+
+        <div
+          id="form-message"
+          class="hidden justify-center items-center mt-4 text-[var(--white)] text-lg"
+        >
+          ✅ Thank you for your message!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" is:inline>
+  const form = document.getElementById("contact-form");
+  const formMessage = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        form.reset();
+        form.style.display = "none";
+        formMessage.classList.remove("hidden");
+      } else {
+        alert("There was a problem sending your message.");
+      }
+    } catch (error) {
+      alert("There was a problem sending your message.");
+    }
+  });
+</script>
