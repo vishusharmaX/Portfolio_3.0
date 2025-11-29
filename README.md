@@ -1,12 +1,12 @@
 # Portfolio – Vishwajeet Sharma
 
-![Portfolio Preview](https://github.com/user-attachments/assets/e284a42b-15c5-495c-99c7-ad5c1eb3bbe7)
+![Portfolio Preview](https://github.com/user-attachments/assets/e4de18cd-b6f6-40b8-a1b8-7c4afcca25c1)
 ![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)
 
 ---
 
 ## 🔗 Live Demo  
-👉 **https://your-portfolio-link.vercel.app/**  
+👉 **https://vishwajeetportfolio-tan.vercel.app/**  
 (Replace with your actual deployed URL)
 
 ---
@@ -34,17 +34,3 @@ The `<LetterGlitch />` component is used from:
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black)
 
 ---
-
-# 🎧 Show Your Favorite Spotify Track  
-![Spotify](https://img.shields.io/badge/Spotify-06cc1a?logo=spotify&logoColor=white)
-
-1. Open any album/playlist on Spotify  
-2. Click **Share → Copy Embed Code**
-3. You will get something like:
-
-```html
-<iframe src="https://open.spotify.com/embed/playlist/PLAYLIST_ID"
-style="border-radius:12px; border:0;" 
-class="w-full h-40" 
-frameborder="0" 
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
